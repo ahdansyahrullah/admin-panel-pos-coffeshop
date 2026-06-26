@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laporan Penjualan</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/navbar.css">
+  <link rel="stylesheet" href="../assets/css/admin.css">
+  <link rel="stylesheet" href="../assets/css/report.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script src="../assets/js/auth.js" defer></script>
+</head>
+<body>
+
+  <div id="navbar"></div>
+
+  <main class="report-page">
+    <section class="report-hero">
+      <div class="report-hero-top">
+        <div class="report-title-wrap">
+          <div class="report-main-icon">
+            <i class="fa-regular fa-file-lines"></i>
+          </div>
+
+          <div>
+            <h1>Laporan Penjualan</h1>
+            <p>Analisis dan ringkasan transaksi</p>
+          </div>
+        </div>
+
+        <div class="report-actions">
+          <button class="action-btn print-btn" id="printBtn" type="button">
+            <i class="fa-solid fa-print"></i>
+            Cetak
+          </button>
+
+          <button class="action-btn export-btn" id="exportBtn" type="button">
+            <i class="fa-solid fa-download"></i>
+            Download CSV
+          </button>
+        </div>
+      </div>
+
+      <div class="filter-tabs" id="filterTabs">
+        <button class="filter-btn active" data-period="today" type="button">Hari Ini</button>
+        <button class="filter-btn" data-period="7days" type="button">7 Hari</button>
+        <button class="filter-btn" data-period="30days" type="button">30 Hari</button>
+        <button class="filter-btn" data-period="all" type="button">Semua</button>
+      </div>
+    </section>
+
+    <section class="report-stats-grid">
+      <article class="report-stat-card">
+        <div class="report-stat-icon">
+          <i class="fa-solid fa-arrow-trend-up"></i>
+        </div>
+
+        <div>
+          <p>Total Pendapatan</p>
+          <h2 id="reportRevenue">Rp 0</h2>
+        </div>
+      </article>
+
+      <article class="report-stat-card">
+        <div class="report-stat-icon">
+          <i class="fa-solid fa-cube"></i>
+        </div>
+
+        <div>
+          <p>Total Pesanan</p>
+          <h2 id="reportOrders">0</h2>
+        </div>
+      </article>
+
+      <article class="report-stat-card">
+        <div class="report-stat-icon">
+          <i class="fa-regular fa-calendar"></i>
+        </div>
+
+        <div>
+          <p>Rata-rata per Pesanan</p>
+          <h2 id="reportAverage">Rp 0</h2>
+        </div>
+      </article>
+    </section>
+
+    <section class="report-grid">
+      <article class="report-card chart-card">
+        <h2>Produk Terlaris</h2>
+        <div class="report-visual-box">
+          <canvas id="reportProductChart"></canvas>
+          <div class="report-empty" id="productEmpty">Belum ada data penjualan</div>
+        </div>
+      </article>
+
+      <article class="report-card chart-card">
+        <h2>Penjualan per Kategori</h2>
+        <div class="report-visual-box">
+          <canvas id="reportCategoryChart"></canvas>
+          <div class="report-empty" id="categoryEmpty">Belum ada data kategori</div>
+        </div>
+      </article>
+
+      <article class="report-card chart-card">
+        <h2>Metode Pembayaran</h2>
+        <div class="report-visual-box">
+          <canvas id="reportPaymentChart"></canvas>
+          <div class="report-empty" id="paymentEmpty">Belum ada data pembayaran</div>
+        </div>
+      </article>
+
+      <article class="report-card detail-card">
+        <h2>Detail Transaksi Terakhir</h2>
+        <div class="transaction-detail-box" id="transactionDetailBox">
+          <div class="report-empty static-empty">Belum ada transaksi</div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../assets/js/navbar.js"></script>
+  <script src="../assets/js/report.js"></script>
+</body>
+</html>

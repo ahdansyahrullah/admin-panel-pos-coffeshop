@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Riwayat Pesanan</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/navbar.css">
+  <link rel="stylesheet" href="../assets/css/admin.css">
+  <link rel="stylesheet" href="../assets/css/history.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script src="../assets/js/auth.js" defer></script>
+</head>
+
+<body>
+
+  <div id="navbar"></div>
+
+  <main class="history-page">
+    <section class="history-header">
+      <h1>Riwayat Pesanan</h1>
+      <p>Lihat semua transaksi yang telah dilakukan</p>
+    </section>
+
+    <section class="history-filter-box">
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Cari pesanan, pelanggan, atau produk..."
+        >
+      </div>
+
+      <div class="date-box">
+        <i class="fa-regular fa-calendar"></i>
+        <input type="date" id="dateInput">
+      </div>
+    </section>
+
+    <section class="history-list-card">
+      <div id="historyContainer"></div>
+    </section>
+  </main>
+
+  <script src="../assets/js/navbar.js"></script>
+  <script src="../assets/js/history.js"></script>
+
+</body>
+</html>

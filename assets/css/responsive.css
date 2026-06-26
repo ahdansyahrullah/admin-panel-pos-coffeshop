@@ -1,0 +1,865 @@
+/* =====================================================
+   RESPONSIVE CSS
+   CoffeeShop POS Dashboard
+   Untuk Tablet dan Mobile
+===================================================== */
+
+
+/* =========================
+   TABLET BESAR / LAPTOP KECIL
+   max-width: 1180px
+========================= */
+
+@media (max-width: 1180px) {
+
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .navbar {
+    padding: 0 22px;
+  }
+
+  .logo-area h2 {
+    font-size: 26px;
+  }
+
+  .menu {
+    gap: 10px;
+  }
+
+  .menu a {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  /* POS */
+  .container {
+    grid-template-columns: 1fr 340px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .product-card img {
+    height: 190px;
+    flex-basis: 190px;
+  }
+
+  /* Dashboard */
+  .dashboard-page,
+  .report-page {
+    padding: 26px 28px 40px;
+  }
+
+  .stats-grid,
+  .report-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard-grid,
+  .report-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================
+   TABLET
+   max-width: 1024px
+========================= */
+
+@media (max-width: 1024px) {
+
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  /* Navbar */
+  .navbar {
+    height: auto;
+    padding: 18px 22px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .logo-area {
+    width: 100%;
+  }
+
+  .logo-area i {
+    font-size: 30px;
+  }
+
+  .logo-area h2 {
+    font-size: 28px;
+  }
+
+  .logo-area p {
+    font-size: 13px;
+  }
+
+  .menu {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding-bottom: 4px;
+  }
+
+  .menu::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .menu::-webkit-scrollbar-thumb {
+    background: #d0d5dd;
+    border-radius: 999px;
+  }
+
+  .menu a {
+    flex-shrink: 0;
+    height: 42px;
+    padding: 0 16px;
+    font-size: 14px;
+  }
+
+  /* POS Layout */
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: auto;
+  }
+
+  .products-section {
+    overflow: visible;
+  }
+
+  .category-bar {
+    overflow-x: auto;
+    padding: 14px 18px;
+    gap: 10px;
+  }
+
+  .category-bar::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .category {
+    flex-shrink: 0;
+    height: 38px;
+    padding: 0 18px;
+    font-size: 14px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 300px;
+    padding: 18px;
+    gap: 16px;
+  }
+
+  .product-card img {
+    height: 180px;
+    flex-basis: 180px;
+  }
+
+  .product-info {
+    padding: 14px;
+  }
+
+  .product-name {
+    font-size: 15px;
+    min-height: 40px;
+  }
+
+  .price {
+    font-size: 14px;
+  }
+
+  .add-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .cart-panel {
+    height: auto;
+    min-height: auto;
+    border-left: none;
+    border-top: 1px solid var(--border);
+  }
+
+  .cart-body {
+    max-height: 420px;
+    overflow-y: auto;
+  }
+
+  .cart-footer {
+    position: sticky;
+    bottom: 0;
+  }
+
+  /* History */
+  .history-page {
+    padding: 24px 24px 34px;
+  }
+
+  .history-filter-box {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .history-top {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .invoice-total {
+    text-align: left;
+  }
+
+  /* Dashboard */
+  .dashboard-page {
+    padding: 24px 24px 36px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 28px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .dashboard-card {
+    min-height: 340px;
+  }
+
+  .visual-box,
+  .product-detail-box {
+    height: 280px;
+  }
+
+  /* Report */
+  .report-page {
+    padding: 24px 24px 36px;
+  }
+
+  .report-hero {
+    padding: 24px;
+  }
+
+  .report-hero-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .report-actions {
+    width: 100%;
+  }
+
+  .report-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .report-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .report-visual-box {
+    height: 280px;
+  }
+}
+
+
+/* =========================
+   TABLET KECIL / MOBILE BESAR
+   max-width: 768px
+========================= */
+
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  /* Navbar */
+  .navbar {
+    padding: 16px;
+    gap: 14px;
+  }
+
+  .logo-area i {
+    font-size: 28px;
+  }
+
+  .logo-area h2 {
+    font-size: 24px;
+  }
+
+  .logo-area p {
+    font-size: 12px;
+  }
+
+  .menu {
+    gap: 8px;
+  }
+
+  .menu a {
+    height: 40px;
+    padding: 0 14px;
+    border-radius: 12px;
+    font-size: 13px;
+  }
+
+  .menu a i {
+    font-size: 15px;
+  }
+
+  /* POS */
+  .category-bar {
+    padding: 12px 14px;
+  }
+
+  .category {
+    height: 36px;
+    padding: 0 16px;
+    font-size: 13px;
+    border-radius: 10px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 275px;
+    padding: 14px;
+    gap: 14px;
+  }
+
+  .product-card {
+    border-radius: 16px;
+  }
+
+  .product-card img {
+    height: 155px;
+    flex-basis: 155px;
+  }
+
+  .product-info {
+    padding: 12px;
+  }
+
+  .product-name {
+    font-size: 14px;
+    min-height: 36px;
+    margin-bottom: 8px;
+  }
+
+  .price {
+    font-size: 13px;
+  }
+
+  .add-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+
+  .cart-header {
+    padding: 18px;
+  }
+
+  .cart-header h2 {
+    font-size: 17px;
+  }
+
+  .cart-body {
+    padding: 10px;
+    max-height: 380px;
+  }
+
+  .cart-item {
+    padding: 12px;
+    border-radius: 16px;
+  }
+
+  .cart-item img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .cart-name {
+    font-size: 14px;
+  }
+
+  .cart-price {
+    font-size: 13px;
+  }
+
+  .qty-btn {
+    width: 30px;
+    height: 30px;
+  }
+
+  .cart-footer {
+    padding: 16px;
+  }
+
+  #payBtn {
+    height: 48px;
+    border-radius: 12px;
+  }
+
+  /* Modal Pembayaran */
+  .modal-overlay {
+    align-items: flex-start;
+    padding: 12px;
+    overflow-y: auto;
+  }
+
+  .payment-modal {
+    width: 100%;
+    max-width: 100%;
+    max-height: calc(100vh - 24px);
+    overflow-y: auto;
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  .payment-total h1 {
+    font-size: 32px;
+  }
+
+  .form-group input {
+    height: 46px;
+  }
+
+  .payment-methods {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .method-btn {
+    height: 68px;
+    font-size: 13px;
+  }
+
+  .quick-money {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .quick-money button {
+    height: 38px;
+  }
+
+  .confirm-payment {
+    height: 48px;
+  }
+
+  /* History */
+  .history-page {
+    padding: 20px 16px 30px;
+  }
+
+  .history-header {
+    margin-bottom: 22px;
+  }
+
+  .history-header h1 {
+    font-size: 25px;
+  }
+
+  .history-header p {
+    font-size: 14px;
+  }
+
+  .history-filter-box {
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .search-box,
+  .date-box {
+    height: 42px;
+  }
+
+  .search-box input,
+  .date-box input {
+    font-size: 13px;
+  }
+
+  .history-item {
+    padding: 16px;
+  }
+
+  .history-meta {
+    gap: 8px;
+  }
+
+  .meta-pill {
+    font-size: 12px;
+    padding: 7px 10px;
+  }
+
+  .product-row {
+    font-size: 13px;
+  }
+
+  /* Dashboard */
+  .dashboard-page {
+    padding: 20px 16px 30px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 25px;
+  }
+
+  .dashboard-header p {
+    font-size: 14px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .stat-card {
+    padding: 18px;
+  }
+
+  .stat-card h2 {
+    font-size: 24px;
+  }
+
+  .dashboard-card {
+    padding: 18px;
+    min-height: 320px;
+    border-radius: 18px;
+  }
+
+  .card-title h2 {
+    font-size: 17px;
+  }
+
+  .visual-box,
+  .product-detail-box {
+    height: 260px;
+  }
+
+  .top-product-item {
+    grid-template-columns: 32px 1fr;
+    gap: 10px;
+  }
+
+  .product-detail-value {
+    grid-column: 2;
+    text-align: left;
+  }
+
+  /* Report */
+  .report-page {
+    padding: 20px 16px 30px;
+  }
+
+  .report-hero {
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  .report-title-wrap {
+    align-items: flex-start;
+  }
+
+  .report-main-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 19px;
+  }
+
+  .report-title-wrap h1 {
+    font-size: 25px;
+  }
+
+  .report-title-wrap p {
+    font-size: 14px;
+  }
+
+  .report-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .action-btn {
+    width: 100%;
+    height: 44px;
+  }
+
+  .filter-tabs {
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+
+  .filter-btn {
+    flex-shrink: 0;
+    height: 38px;
+    padding: 0 14px;
+    font-size: 13px;
+  }
+
+  .report-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .report-stat-card {
+    padding: 18px;
+  }
+
+  .report-stat-card h2 {
+    font-size: 24px;
+  }
+
+  .report-card {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .report-card h2 {
+    font-size: 17px;
+  }
+
+  .report-visual-box {
+    height: 260px;
+  }
+
+  .transaction-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .transaction-value {
+    text-align: left;
+  }
+}
+
+
+/* =========================
+   MOBILE KECIL
+   max-width: 480px
+========================= */
+
+@media (max-width: 480px) {
+
+  .navbar {
+    padding: 14px;
+  }
+
+  .logo-area {
+    gap: 10px;
+  }
+
+  .logo-area i {
+    font-size: 26px;
+  }
+
+  .logo-area h2 {
+    font-size: 22px;
+  }
+
+  .logo-area p {
+    font-size: 11px;
+  }
+
+  .menu a {
+    height: 38px;
+    padding: 0 12px;
+    font-size: 12px;
+  }
+
+  /* POS */
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 255px;
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .product-card img {
+    height: 140px;
+    flex-basis: 140px;
+  }
+
+  .product-info {
+    padding: 10px;
+  }
+
+  .product-name {
+    font-size: 13px;
+    min-height: 34px;
+  }
+
+  .price {
+    font-size: 12px;
+  }
+
+  .add-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 15px;
+  }
+
+  .cart-item {
+    gap: 10px;
+  }
+
+  .cart-item img {
+    width: 52px;
+    height: 52px;
+  }
+
+  .summary div,
+  .total {
+    font-size: 14px;
+  }
+
+  .total h2 {
+    font-size: 22px;
+  }
+
+  /* Modal */
+  .payment-modal {
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  .modal-header h2 {
+    font-size: 18px;
+  }
+
+  .payment-total h1 {
+    font-size: 28px;
+  }
+
+  .payment-methods {
+    grid-template-columns: 1fr;
+  }
+
+  .method-btn {
+    height: 54px;
+    flex-direction: row;
+  }
+
+  .quick-money {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* History */
+  .history-header h1,
+  .dashboard-header h1,
+  .report-title-wrap h1 {
+    font-size: 23px;
+  }
+
+  .history-list-card {
+    border-radius: 16px;
+  }
+
+  .invoice-info h3 {
+    font-size: 15px;
+  }
+
+  .invoice-total h4 {
+    font-size: 16px;
+  }
+
+  /* Dashboard */
+  .stat-card {
+    border-radius: 18px;
+  }
+
+  .stat-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .stat-card h2 {
+    font-size: 22px;
+  }
+
+  .dashboard-card {
+    padding: 16px;
+  }
+
+  .visual-box,
+  .product-detail-box {
+    height: 240px;
+  }
+
+  /* Report */
+  .report-stat-card h2 {
+    font-size: 22px;
+  }
+
+  .report-card {
+    padding: 16px;
+  }
+
+  .report-visual-box {
+    height: 240px;
+  }
+}
+
+
+/* =========================
+   MOBILE SANGAT KECIL
+   max-width: 360px
+========================= */
+
+@media (max-width: 360px) {
+
+  .products-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 285px;
+  }
+
+  .product-card img {
+    height: 170px;
+    flex-basis: 170px;
+  }
+
+  .menu a {
+    font-size: 11px;
+  }
+
+  .category {
+    font-size: 12px;
+  }
+
+  .payment-total h1 {
+    font-size: 25px;
+  }
+
+  .quick-money {
+    grid-template-columns: 1fr;
+  }
+}
