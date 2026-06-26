@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Penjualan</title>
+
+  <script src="../assets/js/auth.js" defer></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/navbar.css">
+  <link rel="stylesheet" href="../assets/css/admin.css">
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script src="../assets/js/auth.js" defer></script>
+</head>
+<body>
+
+  <div id="navbar"></div>
+
+  <main class="dashboard-page">
+    <section class="dashboard-header">
+      <h1>Dashboard</h1>
+      <p>Ringkasan performa dan statistik penjualan</p>
+    </section>
+
+    <section class="stats-grid">
+      <article class="stat-card">
+        <div class="stat-icon icon-dollar">
+          <i class="fa-solid fa-dollar-sign"></i>
+        </div>
+        <p>Total Pendapatan</p>
+        <h2 id="totalRevenue">Rp 0</h2>
+        <span id="todayRevenue">Hari ini: Rp 0</span>
+      </article>
+
+      <article class="stat-card">
+        <div class="stat-icon icon-order">
+          <i class="fa-regular fa-clipboard"></i>
+        </div>
+        <p>Total Pesanan</p>
+        <h2 id="totalOrders">0</h2>
+        <span id="todayOrders">Hari ini: 0</span>
+      </article>
+
+      <article class="stat-card">
+        <div class="stat-icon icon-average">
+          <i class="fa-solid fa-arrow-trend-up"></i>
+        </div>
+        <p>Rata-rata Pesanan</p>
+        <h2 id="averageOrder">Rp 0</h2>
+        <span>Per transaksi</span>
+      </article>
+
+      <article class="stat-card">
+        <div class="stat-icon icon-items">
+          <i class="fa-solid fa-users"></i>
+        </div>
+        <p>Total Item Terjual</p>
+        <h2 id="totalItems">0</h2>
+        <span>Semua produk</span>
+      </article>
+    </section>
+
+    <section class="dashboard-grid">
+      <article class="dashboard-card chart-card">
+        <div class="card-title">
+          <i class="fa-solid fa-chart-column"></i>
+          <h2>Produk Terlaris</h2>
+        </div>
+        <div class="visual-box">
+          <canvas id="bestProductChart"></canvas>
+          <div class="empty-visual" id="bestProductEmpty">
+            Belum ada data penjualan
+          </div>
+        </div>
+      </article>
+
+      <article class="dashboard-card chart-card">
+        <div class="card-title no-icon">
+          <h2>Distribusi Kategori</h2>
+        </div>
+        <div class="visual-box">
+          <canvas id="categoryChart"></canvas>
+          <div class="empty-visual" id="categoryEmpty">
+            Belum ada data penjualan
+          </div>
+        </div>
+      </article>
+
+      <article class="dashboard-card chart-card">
+        <div class="card-title no-icon">
+          <h2>Metode Pembayaran</h2>
+        </div>
+        <div class="visual-box">
+          <canvas id="paymentMethodChart"></canvas>
+          <div class="empty-visual" id="paymentMethodEmpty">
+            Belum ada data pembayaran
+          </div>
+        </div>
+      </article>
+
+      <article class="dashboard-card detail-card">
+        <div class="card-title no-icon">
+          <h2>Detail Produk Terlaris</h2>
+        </div>
+        <div class="visual-box product-detail-box" id="topProductDetail">
+          <div class="empty-visual static-empty">
+            Belum ada data penjualan
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../assets/js/navbar.js"></script>
+<script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

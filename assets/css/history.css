@@ -1,0 +1,238 @@
+/* PAGE */
+
+body{
+  background: #F7F8F5;
+  overflow: auto;
+}
+
+.history-page{
+  padding: 28px 34px 34px;
+}
+
+.history-header{
+  margin-bottom: 30px;
+}
+
+.history-header h1{
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #101828;
+  margin-bottom: 10px;
+}
+
+.history-header p{
+  font-size: 16px;
+  font-weight: 400;
+  color: #475467;
+}
+
+/* FILTER BOX */
+
+.history-filter-box{
+  background: #F7F8F5;
+  border: 1px solid #E4E7EC;
+  border-radius: 18px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.search-box,
+.date-box{
+  height: 44px;
+  background: #FCFCFD;
+  border: 1px solid #D0D5DD;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 14px;
+}
+
+.search-box i,
+.date-box i{
+  font-size: 18px;
+  color: #98A2B3;
+  flex-shrink: 0;
+}
+
+.search-box input,
+.date-box input{
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 15px;
+  font-weight: 400;
+  color: #101828;
+  font-family: 'Poppins', sans-serif;
+}
+
+.date-box input{
+  padding-right: 4px;
+}
+
+/* LIST CARD */
+
+.history-list-card{
+  background: #F7F8F5;
+  border: 1px solid #E4E7EC;
+  border-radius: 18px;
+  min-height: 320px;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* EMPTY STATE */
+
+.empty-history{
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #98A2B3;
+  text-align: center;
+}
+
+.empty-history i{
+  font-size: 54px;
+  margin-bottom: 14px;
+  color: #D0D5DD;
+}
+
+.empty-history h3{
+  font-size: 18px;
+  font-weight: 600;
+  color: #101828;
+  margin-bottom: 8px;
+}
+
+.empty-history p{
+  font-size: 16px;
+  font-weight: 400;
+  color: #667085;
+}
+
+/* TRANSACTION LIST */
+
+.history-list{
+  display: flex;
+  flex-direction: column;
+}
+
+.history-item{
+  padding: 20px 24px;
+  border-bottom: 1px solid #EAECF0;
+  background: #fff;
+}
+
+.history-item:last-child{
+  border-bottom: none;
+}
+
+.history-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.invoice-info h3{
+  font-size: 16px;
+  font-weight: 600;
+  color: #101828;
+  margin-bottom: 4px;
+}
+
+.invoice-info p{
+  font-size: 14px;
+  color: #667085;
+}
+
+.invoice-total{
+  text-align: right;
+}
+
+.invoice-total h4{
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+
+.invoice-total p{
+  font-size: 13px;
+  color: #667085;
+}
+
+.history-meta{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.meta-pill{
+  background: #F2F4F7;
+  color: #344054;
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.history-products{
+  border-top: 1px dashed #E4E7EC;
+  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.product-row{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 14px;
+  color: #344054;
+}
+
+.product-row .left{
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.product-row .qty{
+  color: #667085;
+}
+
+@media (max-width: 900px){
+  .history-filter-box{
+    grid-template-columns: 1fr;
+  }
+
+  .history-top{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .invoice-total{
+    text-align: left;
+  }
+
+  .menu{
+    gap: 10px;
+  }
+
+  .menu a{
+    padding: 0 14px;
+    font-size: 14px;
+  }
+}
